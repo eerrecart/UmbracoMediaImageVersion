@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    ViewBag.Title = "Page";
+    Layout = "~/Views/Master.cshtml";
+}
+
+@section body_placeHolder{
+
+<h2>Page</h2>
+
+    @Umbraco.RenderMacro("imageSelector")
+
+}

@@ -1,0 +1,20 @@
+﻿@using MediaHelper
+@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    string imageUrl = MediaHelper.UmbracoDataHelper.GetImageURL(Model.Content.GetPropertyValue("imageSelector").ToString(), "main");
+}
+
+<p>
+    <code>
+        Media url + versión :
+    </code>
+</p>
+
+<p>
+    
+    <code>
+        @Html.Raw(imageUrl)
+    </code>
+</p>
+<hr />
+<img src="@imageUrl" />
